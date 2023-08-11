@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express')
 const mongoose = require('mongoose');
-const Book = require('./models/books');
+const Book = require('./models/books.js');
 
 const app = express()
 const PORT = process.env.PORT || 3000;
