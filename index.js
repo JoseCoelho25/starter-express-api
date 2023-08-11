@@ -46,7 +46,7 @@ app.get('/add-note', async(req,res)=> {
     }
 })
 
-app.get('/books'), async(req,res)=> {
+app.get('/books', async(req,res)=> {
     const book = await Book.find();
 
     if(book){
@@ -54,7 +54,7 @@ app.get('/books'), async(req,res)=> {
     }else {
         res.send("Something went wrong.");
     }
-}
+});
 
 connectDB().then(()=> {
     app.listen(PORT, ()=> {
